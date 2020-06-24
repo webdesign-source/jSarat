@@ -1,0 +1,110 @@
+<html>
+<head>
+	<title>Registration</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+<style>
+
+p.exe{
+margin-left: 100px;
+font-weight: bold;
+font-size: 25px;
+}
+pre {
+margin-left: 40%;
+font-weight: bold;
+font-size: 18px;
+}
+</style>
+<script>
+function validate()
+{
+var n=f.name.value;
+var v=new RegExp("^[a-zA-Z][a-zA-Z]+$") ;
+var p=f.pwd.value;
+var ph=f.pno.value;
+var a=f.email.value;
+var a1=a.indexOf("@");
+var dot=a.indexOf(".");
+if(!n.match(v))
+{
+alert("name should be characters only");
+if(n.length<6)
+alert("name should be greater than 6 characters");
+}
+else
+if(n.length<6)
+alert("name should be greater than 6 characters");
+if(p.length<6)
+alert("password should be atleast 6 characters");
+if(ph.length<10 ||ph.length>10)
+alert("phone no. should be exactly 10 char");
+if(a1<1||dot<a1+2||(dot+2)>a.length)
+alert("invalid email");
+}
+</script>
+</head>
+<body>
+	<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="p-4 pt-5">
+		  		
+	        <ul class="list-unstyled components mb-5">
+	          <li>
+	            <a href="Home.html">Home</a>
+	          </li>
+	          <li>
+	              <a href="Login.html">Login</a>
+	          </li>
+	          <li class="active">
+              <a href="Register.html">Register</a>
+	          </li>
+	          <li>
+              <a href="Catalogue.html">Catalogue</a>
+	          </li>
+	          <li>
+              <a href="Cart.html">Cart</a>
+	          </li>
+	        </ul>
+
+	        
+
+	      </div>
+    	</nav>
+
+ <div id="content" class="p-4 p-md-5">
+<div class="register">
+<p class="exe">
+<center><h2> REGISTER </h2></center></p>
+<form name="f" method="post" action="login.html">
+<pre>
+Name  &nbsp&nbsp&nbsp:<input type="text" name="name" size="20"/><br>
+Password :<input type="password" name="pwd" size="20"/><br>
+Email Id :<input type="text" name="email" size="20"/><br>
+Phone No :<input type="text" name="pno" size="20"/><br>
+Gender : 
+<input type="radio" id="male" name="gender" value="male"> <label
+for="male">Male</label>
+<input type="radio" id="female" name="gender" value="female"> <label
+for="female">Female</label>
+<input type="radio" id="other" name="gender" value="other"> <label
+for="other">Other</label>
+Date Of Birth : <input type="date" name="date" value="date">
+<br><br>
+Languages Known : 
+<input type="checkbox" name="c1"/> C
+<input type="checkbox" name="c2" /> C++
+<input type="checkbox" name="c3" /> Java<br><br>
+Address      :<textarea name="text" value=" " rows="3" cols="15" scrolling="no"></textarea><br><br><br>
+</pre>
+<center>
+<input type="submit" value="Register" name="register" onclick="validate()"/>
+&nbsp;&nbsp; <input type="reset" value="Reset"/></center>
+</form>
+</body>
+</html>

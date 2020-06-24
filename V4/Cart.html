@@ -1,0 +1,89 @@
+<html>
+<head>
+	<title>Cart</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="style.css">
+<script>
+function one()
+{
+var a=f.t2.value;
+var b=f.t3.value;
+f.a1.value=a*b;
+}
+function two()
+{
+var a=f.t5.value;
+var b=f.t6.value;
+f.a2.value=a*b;
+}
+function add()
+{
+var s1=parseInt(f.a1.value);
+var s2=parseInt(f.a2.value);
+f.a3.value=s1+s2;
+}
+</script>
+</head>
+<body>
+	<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="p-4 pt-5">
+		  		
+	        <ul class="list-unstyled components mb-5">
+	          <li>
+	            <a href="Home.html">Home</a>
+	          </li>
+	          <li>
+	              <a href="Login.html">Login</a>
+	          </li>
+	          <li>
+              <a href="Register.html">Register</a>
+	          </li>
+	          <li>
+              <a href="Catalogue.html">Catalogue</a>
+	          </li>
+	          <li class="active">
+              <a href="Cart.html">Cart</a>
+	          </li>
+	        </ul>
+
+	        
+
+	      </div>
+    	</nav>
+ <div id="content" class="p-4 p-md-5">
+<center><h2>CART</h2></center>
+<form name="f">
+<table width="100%" border="0" style="text-align:center" cellspacing="2"
+cellpadding="2">
+<tr bgcolor="#424949">
+<th style="height:35px"><font color="white">Book Name</th>
+<th><font color="white">Price</th>
+<th><font color="white">Quantity</th>
+<th><font color="white">Amount</th>
+</tr>
+<tr>
+<td style="height:30px"><input type="text" name="t1" value="" /></td>
+<td>$<input type="text" name="t2" value="" /></td>
+<td><input type="text" name="t3" value="" /></td>
+<td>$<input type="text" name="a1" onfocus="one()"/></td>
+</tr>
+<tr>
+<td style="height:30px"><input type="text" name="t4" value="" /></td>
+<td>$<input type="text" name="t5" value="" /></td>
+<td><input type="text" name="t6" value="" /></td>
+<td>$<input type="text" name="a2" onfocus="two()"/></td>
+</tr>
+<tr >
+<td colspan="3" style="height:30px" align="right"><b>Total Amount</b></td>
+<td>$<input type="text" name="a3" value="" onfocus="add()"/></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
